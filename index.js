@@ -1,6 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
+import chalk from "chalk";
 
 //import router
 import studentRouter from "./routes/studentRoute.js";
@@ -22,5 +23,10 @@ app.use("/", studentRouter);
 
 const port = 3000;
 app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`);
+  console.log(
+    chalk.gray(
+      "---------------------------------------------------------------------------------------"
+    )
+  );
+  console.log(`Server is running at ` + chalk.blue(`http://localhost:${port}`));
 });

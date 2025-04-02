@@ -1,5 +1,6 @@
 import bcrypt from "bcrypt";
 import crypto from "crypto";
+import chalk from "chalk";
 
 // import models
 import Student from "../models/student.js";
@@ -43,13 +44,30 @@ export function registerStudent(req, res) {
         });
 
         // Developer Purpose
-        console.log("-----------------------------");
-        console.log("Student Saved Successfully");
-        console.log("Student Name \t\t: ", req.body.studentUsername);
-        console.log("Student Password \t: ", req.body.studentPassword);
-        console.log("Salt Phase \t\t: ", saltPhase);
-        console.log("Hashed Student Password\t: ", tempStudentHash);
-        console.log("Hashed Salted Password\t: ", hashedPassword);
+        console.log(
+          chalk.gray(
+            "---------------------------------------------------------------------------------------"
+          )
+        );
+        console.log(chalk.green("Student Saved Successfully"));
+        console.log(chalk.red("*** This is for developer purpose only ***"));
+        console.log(
+          chalk.hex("#FFA500")("Student Name \t\t: "),
+          req.body.studentUsername
+        ); // Orange color
+        console.log(
+          chalk.hex("#FFA500")("Student Password \t: "),
+          req.body.studentPassword
+        ); // Orange color
+        console.log(chalk.hex("#FFA500")("Salt Phase \t\t: "), saltPhase); // Orange color
+        console.log(
+          chalk.hex("#FFA500")("Hashed Student Password\t: "),
+          tempStudentHash
+        ); // Orange color
+        console.log(
+          chalk.hex("#FFA500")("Hashed Salted Password\t: "),
+          hashedPassword
+        ); // Orange color
       })
       .catch((error) => {
         res.status(400).json({
