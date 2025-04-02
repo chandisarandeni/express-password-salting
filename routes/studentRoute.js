@@ -3,6 +3,6 @@ import { registerStudent } from "../controllers/studentController.js";
 
 const studentRouter = express.Router();
 
-studentRouter.post("/register", registerStudent);
+studentRouter.post("/", registerStudent);
 
 export default studentRouter;
