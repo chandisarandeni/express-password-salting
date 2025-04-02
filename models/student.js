@@ -1,5 +1,3 @@
-import mongoose from "mongoose";
-
 const studentSchema = mongoose.Schema({
   studentUsername: {
     type: String,
