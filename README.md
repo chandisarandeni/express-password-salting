@@ -1,5 +1,8 @@
 # express-password-salting
-
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/6fb31df9-a83d-42ee-93ca-d559907b7285" width="900">
+</div>
+<br>
 This repository demonstrates password salting using Express.js with bcrypt and crypto.
 
 ## Features
