@@ -9,6 +9,7 @@ const app = express();
 
 app.use(bodyParser.json());
 
+// Use the router
 app.use("/", studentRouter);
 
 const port = 3000;

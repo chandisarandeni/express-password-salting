@@ -1,3 +1,4 @@
+// Student model schema
 const studentSchema = mongoose.Schema({
   studentUsername: {
     type: String,

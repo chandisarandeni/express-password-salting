@@ -2,10 +2,12 @@ import bcrypt from "bcrypt";
 import crypto from "crypto";
 import chalk from "chalk";
 
+// This function generates a random salt phase for password hashing
 function genterateSaltPhase() {
   return crypto.randomBytes(3).toString("hex").toUpperCase();
 }
 
+// This function handles the registration of a student
 export function registerStudent(req, res) {
   try {
     // Generate salt phase
@@ -46,6 +48,8 @@ export function registerStudent(req, res) {
       hashedPassword
     ); // Orange color
 
+    // Log the student registration details
+    // For developer purpose only, not saving to database
     res.json({
       message: "Student registration details logged successfully",
       "Student Name": req.body.studentUsername,
