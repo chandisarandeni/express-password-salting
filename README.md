@@ -17,20 +17,33 @@ This repository demonstrates password salting using Express.js with bcrypt and c
 - crypto
 
 ## Installation
-*Step 01*
+### Step 1 : Clone repositery
 ```sh
 git clone https://github.com/chandisarandeni/express-password-salting
 ```
-*Step 02*
-```sh
-cd express-password-salting
-```
-*Step 03*
+### Step 2 : Install dependancies
 ```sh
 npm install
 ```
 
-## Usage
+### Step 3 : Start the program
 ```sh
 npm start
 ```
+### Step 4 : Register Student
+Send a POST request to `localhost:3000/` with the following JSON body:
+```json
+{
+    "studentUsername": "Kamal Nanayakkara",
+    "studentPassword": "123ABCPassword"
+}
+```
+Then you can see
+- Student Name
+- Student Password
+- Salt phase
+- Hashed student Password
+- Hashed Salted Password
+
+---
+If you have any suggestions for improvement, feel free to submit a pull request.
