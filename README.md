@@ -21,7 +21,7 @@ This repository demonstrates password salting using **Express.js** with **bcrypt
 
 ### Step 1: Clone the repository
 ```sh
-git clone https://github.com/chandisarandeni/express-password-salting
+https://github.com/chandisarandeni/express-password-salting.git
 ```
 
 ### Step 2: Install dependencies
